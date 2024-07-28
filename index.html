@@ -2,57 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            width: 100%;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            width: 100%;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-        }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-    </style>
+    <title>Spotify Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Project Site</h1>
-    </header>
-    <main>
-        <p>This is a simple project site hosted on GitHub Pages.</p>
-        <p>Feel free to explore and learn more about my work.</p>
-        <p><a href="https://github.com/your-username/my-project-site">Visit the repository on GitHub</a></p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+    <div id="slide1" class="slide active">
+        <h1>Welcome to the Spotify Data Visualization</h1>
+        <p>This interactive slideshow will guide you through various insights from the Spotify dataset.</p>
+        <p>We are specifically analyzing relationships with energy, especially through varying genres.</p>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+    <div id="slide2" class="slide">
+        <h1>Scatterplot of Energy vs. Decibels</h1>
+        <div class="controls">
+            <label for="genreFilter">Genre:</label>
+            <select id="genreFilter" onchange="updateFilter()">
+                <option value="All">All</option>
+            </select>
+            <label for="popularityFilter">Min Popularity:</label>
+            <input type="range" id="popularityFilter" min="0" max="100" value="0" oninput="updateFilter()">
+            <span id="popularityValue">0</span>
+            <label for="showTrend">Show Trend Line:</label>
+            <input type="checkbox" id="showTrend" checked onchange="updateTrendLine()">
+        </div>
+        <div id="scatterplot"></div>
+        <div class="navigation">
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+    <div id="slide3" class="slide">
+        <h1>Average Energy by Genre</h1>
+        <div id="barchart"></div>
+        <div class="pagination">
+            <button id="previousPage" onclick="previousPage()">Previous 20</button>
+            <button id="nextPage" onclick="nextPage()">Next 20</button>
+        </div>
+        <div class="navigation">
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+    <div id="slide4" class="slide">
+        <h1>Energy Distribution by Genre</h1>
+        <div class="controls">
+            <label for="genreSelect1">Select Genre 1:</label>
+            <select id="genreSelect1" onchange="updateBoxPlot()">
+            </select>
+            <label for="genreSelect2">Select Genre 2:</label>
+            <select id="genreSelect2" onchange="updateBoxPlot()">
+            </select>
+        </div>
+        <div id="boxplot"></div>
+        <div class="navigation">
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()" id="nextButton">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
