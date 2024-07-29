@@ -2,6 +2,8 @@
 
 Welcome to the Spotify Data Visualization Project! This project aims to explore and analyze the energy levels of songs in various genres on Spotify. Through interactive visualizations, users can discover patterns, trends, and insights about the relationship between energy and other musical features.
 
+Website: https://alfredh2.github.io/NarrativeVisualization/
+
 ## Project Overview
 
 The project includes the following interactive visualizations:
