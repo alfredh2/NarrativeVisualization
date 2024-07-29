@@ -27,7 +27,7 @@ This side-by-side box plot allows users to compare the energy distribution of tw
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/spotify-data-visualization.git
+   git clone https://github.com/alfredh2/spotify-data-visualization.git
    ```
 2. Open the `index.html` file in your web browser to view the visualizations.
 
