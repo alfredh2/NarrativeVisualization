@@ -34,7 +34,6 @@ This side-by-side box plot allows users to compare the energy distribution of tw
 ## Dependencies
 This project uses the following libraries:
 - D3.js: For creating the interactive visualizations.
-- d3-annotation: For adding annotations to the visualizations.
 
 ## Files
 - `index.html`: The main HTML file containing the structure of the visualizations.
