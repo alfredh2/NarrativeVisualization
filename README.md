@@ -58,3 +58,7 @@ The dataset (`top_spotify.csv`) includes the following features:
 - `dur`: Duration of the song.
 - `acous`: Acousticness score of the song.
 - `spch`: Speechiness score of the song.
+
+  ## Results
+  Read my Medium article on this project:
+  https://medium.com/@alfredpmhofmann/project-8-spotify-narrative-visualization-analyzing-song-energy-b80595be7bca
